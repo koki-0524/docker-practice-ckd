@@ -1,0 +1,14 @@
+{%  extends "hello/header.html" %}
+
+{% block title %}
+  {{ block.super }} - 書籍登録 -
+{% endblock title %}
+
+{% block contents %}
+<form action="{% url 'book_r' %}" method="post">
+ {% csrf_token %}
+ {{ form.as_p}}
+
+ <button type="submit">登録</button>
+</form>
+{% endblock contents%}

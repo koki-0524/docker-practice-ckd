@@ -1,0 +1,16 @@
+{% load static $}
+{% extends "hello/header.html" %}
+
+
+{% block title %}
+{{ block.super }} -こんにちは世界!! -
+{% endblock %}
+
+{% block contents %}
+<p>このページはテスト用のIndex日本語ページです。</p>
+
+
+<img src="{% static 'image/かおる.jpg' %}" alt="画像データ">
+
+<a href="{% url 'index'%}">indexへ</a>
+{% endblock %}       
